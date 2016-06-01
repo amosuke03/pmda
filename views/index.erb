@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>タイトル</title>
+</head>
+<body>
+  <form action ="/search" method="POST">
+    <input type="text" name="sideeffect" >
+    <input type="submit" value="検索">
+  </form>
+  <h3><%= @name %> 結果</h3>
+  <h4>2009 年・第4期〜2015 年・第3期</h4>
+  <span>副作用報告件数：<%= @number_of_report %></span><br>
+  <span>総報告件数：<%= @total_report %></span><br>
+  <span>男女比  男 <%= @men %>  :女 <%= @women %> ：不明　<%= @other %></span>
+  <p>年齢：</p>
+  <%= @age_hash %>
+  <p>_______________________________________________________________________________</p>
+  <p>用量：</p>　<%= @dose_hash %>
+  <p>_______________________________________________________________________________</p>
+  <p>報告時期：</p>　<%= @time_hash %>
+  <p>_______________________________________________________________________________</p>
+  <!--<p>投与開始時期：　<%= @start_day %></p>-->
+  <!--<p>投与終了時期：　<%= @end_day %></p>-->
+  <p>投与期間にしたーーい </p>
+  <%= @dosing_period %>
+  <!--<p>副作用発生時期：　<%= %></p>-->
+  <br>
+  <br>
+  
+  <form action ="/pmda" method ="GET">
+    <script>
+      console.log("clickした！！！");
+    </script>
+    <input type ="submit" value ="クリック">
+  </form>
+</body>
+</html>
